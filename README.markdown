@@ -12,4 +12,4 @@
 
 ## Copyright
 
-Copyright (c) 2015 Jun Suzuki (jun.suzuki.japan@gmail.com)
+Licensed under the MIT License.
