@@ -4,6 +4,7 @@
   (:export :run-command))
 (in-package :stein.util)
 
+
 (defun run-command (cmd &rest args)
 #+sbcl
   (let ((error-string (make-array '(0) :element-type 'base-char
@@ -11,7 +12,7 @@
                                   :adjustable t)))
     (with-output-to-string (stream)
       (with-output-to-string (error error-string)
-        (let* ((process (sb-ext:run-program cmd args :output stream :error error))
+        (let* ((process (sb-ext:run-program cmd args :output stream :error error :search t)) ; ':search t' => use $PATH
                (exit-code (sb-ext:process-exit-code process)))
           (if (/= exit-code 0)
                 (error "while executing command '~a'~%~a" cmd error-string))))))
