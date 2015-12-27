@@ -1,13 +1,13 @@
-language: common-lisp
+language: lisp
 
 install:
  - sudo apt-get update -qq
  - sudo apt-get install -qq sbcl
  - curl --no-progress-bar --retry 10 -o quicklisp.lisp -L http://beta.quicklisp.org/quicklisp.lisp
   # Roswell
-  - curl -L https://raw.githubusercontent.com/snmsts/roswell/master/scripts/install-for-ci.sh | sh
+ - curl -L https://raw.githubusercontent.com/snmsts/roswell/master/scripts/install-for-ci.sh | sh
   # prove
-  - ros install prove
+ - ros install prove
 
 cache:
   directories:
@@ -17,7 +17,6 @@ cache:
 before_script:
   - ros --version
   - ros config
-
 
 script:
  - run-prove stein-test.asd
