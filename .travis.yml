@@ -8,6 +8,8 @@ install:
  - curl -L https://raw.githubusercontent.com/snmsts/roswell/master/scripts/install-for-ci.sh | sh
   # prove
  - ros install prove
+ - ros --version
+ - ls
 
 cache:
   directories:
