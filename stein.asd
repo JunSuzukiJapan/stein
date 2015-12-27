@@ -19,10 +19,10 @@
   :depends-on (:cl-annot)
   :components ((:module "src"
                 :components
-                ((:file "stein")
-		 (:file "util")
+		((:file "util")
 		 (:file "git")
-		 (:file "quickload"))))
+		 (:file "quickload")
+		 (:file "stein"))))
   :description ""
   :long-description
   #.(with-open-file (stream (merge-pathnames

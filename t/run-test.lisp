@@ -2,10 +2,6 @@
 
 (load "quicklisp.lisp")
 (quicklisp-quickstart:install)
-;(handler-case
-;    (quicklisp-quickstart:install)
-;  (condition (e)
-;    (format t "error while installing quicklisp. ~a~%" e)))
 
 (ql:quickload :prove)
 
