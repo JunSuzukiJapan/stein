@@ -1,30 +1,23 @@
 language: lisp
-
 install:
- - sudo apt-get update -qq
- - sudo apt-get install -qq sbcl
- - curl --no-progress-bar --retry 10 -o quicklisp.lisp -L http://beta.quicklisp.org/quicklisp.lisp
-  # Roswell
- - curl -L https://raw.githubusercontent.com/snmsts/roswell/master/scripts/install-for-ci.sh | sh
-  # prove
- - ros install prove
- - ros --version
-# - pwd
-# - ls
-# - ls t/
-
+- sudo apt-get update -qq
+- sudo apt-get install -qq sbcl
+- curl --no-progress-bar --retry 10 -o quicklisp.lisp -L http://beta.quicklisp.org/quicklisp.lisp
+- curl -L https://raw.githubusercontent.com/snmsts/roswell/master/scripts/install-for-ci.sh
+  | sh
+- ros install prove
+- ros --version
 cache:
   directories:
-    - $HOME/.roswell
-    - $HOME/.config/common-lisp
-
+  - "$HOME/.roswell"
+  - "$HOME/.config/common-lisp"
 before_script:
-  - ros --version
-  - ros config
-
+- ros --version
+- ros config
 script:
- - sbcl --script t/run-test.lisp
-
+- sbcl --script t/run-test.lisp
 notifications:
   email:
-    - jun.suzuki.japan@gmail.com
+  - jun.suzuki.japan@gmail.com
+  slack:
+    secure: SIpgS/3tQ9HsP+p1Kf/3YJ52PPdNWqdKrnZfTnbQYNsDEgYytXFYPYFkodqrHVWN8qUV18F9BcvKvI055qPFrkbGLHXgScyMZg29Ab/oO7iMAQutNSM0mgu+vCH0OUfSVZYFg7xEnaB/SEd4+lLYHpRq+1utBdoZm9FkDCzeAjKX0M6LCXqGo5Q1Es3HROvfgzVz+VRLo2Qc/y96xUjy8ocOkEtop0neAMj6HcMAmo6j94aOEy+AZx/HwuwY92BmHTNQQRICMmM3bjtZr6ZixGdr3VeVbxS4MNXoaZz/8V3nQzGqyTgPDsDJ3lRctZqxo+Yp76Xj0qdGUG1nX2+erUrazIhQkIIecGhyW2kMcipm++L9n7Xd97/GR12Klity4/TF1jTLo6lODHJkukyI2Oc0G+aV3ZwvQUuQcSAJbfqc1w/w3cTWivopvN8rYksnxgCOW/5stEwZCHmsh87ji2ZUqnfoM/7ioc5W7u3ZwzhDHapyI5hJg3lne34uOXLyYd7HSF9VoxRidx5UnIoVb4U0SQuoF4B9t3FQrYm6XHKl0TbpWYFR1LZVhIocUz19k+W0XUAb7Eich/q2KQ4Z20hciqc8HxyMPpGtHcf8Tmizxly+q+YZfipCeKx5PP0/kMfGyBWq7Nki2ltQYvu7LM3pSQB+lKwoAFvgfDR/fXU=
