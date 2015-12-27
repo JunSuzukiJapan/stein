@@ -1,4 +1,6 @@
 # Stein
+[![Build Status](https://travis-ci.org/JunSuzukiJapan/stein.svg?branch=master)](https://travis-ci.org/JunSuzukiJapan/stein)
+
 
 ## Usage
 
