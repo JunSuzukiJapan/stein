@@ -17,7 +17,6 @@ before_script:
 script:
 - sbcl --script t/run-test.lisp
 notifications:
-  email:
-  - jun.suzuki.japan@gmail.com
+  email: false
   slack:
     secure: SIpgS/3tQ9HsP+p1Kf/3YJ52PPdNWqdKrnZfTnbQYNsDEgYytXFYPYFkodqrHVWN8qUV18F9BcvKvI055qPFrkbGLHXgScyMZg29Ab/oO7iMAQutNSM0mgu+vCH0OUfSVZYFg7xEnaB/SEd4+lLYHpRq+1utBdoZm9FkDCzeAjKX0M6LCXqGo5Q1Es3HROvfgzVz+VRLo2Qc/y96xUjy8ocOkEtop0neAMj6HcMAmo6j94aOEy+AZx/HwuwY92BmHTNQQRICMmM3bjtZr6ZixGdr3VeVbxS4MNXoaZz/8V3nQzGqyTgPDsDJ3lRctZqxo+Yp76Xj0qdGUG1nX2+erUrazIhQkIIecGhyW2kMcipm++L9n7Xd97/GR12Klity4/TF1jTLo6lODHJkukyI2Oc0G+aV3ZwvQUuQcSAJbfqc1w/w3cTWivopvN8rYksnxgCOW/5stEwZCHmsh87ji2ZUqnfoM/7ioc5W7u3ZwzhDHapyI5hJg3lne34uOXLyYd7HSF9VoxRidx5UnIoVb4U0SQuoF4B9t3FQrYm6XHKl0TbpWYFR1LZVhIocUz19k+W0XUAb7Eich/q2KQ4Z20hciqc8HxyMPpGtHcf8Tmizxly+q+YZfipCeKx5PP0/kMfGyBWq7Nki2ltQYvu7LM3pSQB+lKwoAFvgfDR/fXU=
