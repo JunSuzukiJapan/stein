@@ -9,7 +9,9 @@ install:
   # prove
  - ros install prove
  - ros --version
+ - pwd
  - ls
+ - ls t/
 
 cache:
   directories:
