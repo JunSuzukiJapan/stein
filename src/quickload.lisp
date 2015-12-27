@@ -4,6 +4,7 @@
   (:export :quickload))
 (in-package :stein.quickload)
 
-
+(defmethod quickload ((str string))
+  (format t "not implemented yet."))
 
 
