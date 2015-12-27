@@ -19,7 +19,7 @@ before_script:
   - ros config
 
 script:
- - run-prove stein-test.asd
+ - sbcl --script t/run-tests.lisp
 
 notifications:
   email:
