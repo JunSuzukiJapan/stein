@@ -1,6 +1,12 @@
 # Stein
 [![Build Status](https://travis-ci.org/JunSuzukiJapan/stein.svg?branch=master)](https://travis-ci.org/JunSuzukiJapan/stein)
 
+## Requirements
+
+- Unix like os (Linux, Mac OS X).
+- git
+- [Quicklisp](https://www.quicklisp.org/)
+- Sbcl or ClozureCL
 
 ## Installation
 
