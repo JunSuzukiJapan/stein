@@ -16,7 +16,7 @@
   :version "0.1"
   :author "Jun Suzuki"
   :license "MIT"
-  :depends-on (:cl-annot)
+  :depends-on (:cl-ppcre)
   :components ((:module "src"
                 :components
 		((:file "util")

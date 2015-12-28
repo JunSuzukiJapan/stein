@@ -1,7 +1,9 @@
 (in-package :cl-user)
 (defpackage stein.util
   (:use :cl)
-  (:export :run-command))
+  (:export :run-command
+	   :current-directory
+	   :cd))
 (in-package :stein.util)
 
 
@@ -27,3 +29,13 @@
               (ccl:external-process-status external-process)
             (if (/= exit-code 0)
                 (error "while executing command '~a'~%~a" cmd error-string))))))))
+
+(defun cd (path)
+#+(or ccl sbcl)
+  (uiop/os:chdir path))
+
+(defun current-directory ()
+#+sbcl
+  (sb-posix:getcwd)
+#+ccl
+  (ccl:current-directory))

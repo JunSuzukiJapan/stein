@@ -2,9 +2,23 @@
 [![Build Status](https://travis-ci.org/JunSuzukiJapan/stein.svg?branch=master)](https://travis-ci.org/JunSuzukiJapan/stein)
 
 
-## Usage
-
 ## Installation
+
+```bash:shell
+$ cd ~/quicklisp/local-projects
+$ git clone https://github.com/JunSuzukiJapan/stein.git
+```
+
+```lisp:lisp
+(ql:register-local-projects)
+(ql:quickload :stein)
+```
+
+## Example
+
+```lisp:example
+(stn:quickload "https://github.com/fukamachi/prove.git")
+```
 
 ## Author
 

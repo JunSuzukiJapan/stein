@@ -3,14 +3,20 @@
   (:nicknames :git :stn)
   (:use :cl)
   (:import-from :stein.util
-                :run-command)
+                :run-command
+		:cd
+		:current-directory)
   (:import-from :stein.git
                 :init
                 :clone)
   (:import-from :stein.quickload
-                :quickload)
+                :quickload
+		:reload)
   (:export :init
            :clone
            :run-command
-           :quickload))
+	   :cd
+	   :current-directory
+           :quickload
+	   :reload))
 (in-package :stein)
