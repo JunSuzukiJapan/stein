@@ -10,6 +10,7 @@ $ git clone https://github.com/JunSuzukiJapan/stein.git
 ```
 
 ```lisp:lisp
+(require :quicklisp)
 (ql:register-local-projects)
 (ql:quickload :stein)
 ```
