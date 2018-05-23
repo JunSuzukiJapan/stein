@@ -17,8 +17,9 @@
       (stein.util:cd ql-local-projects))
     (stein.git:clone uri)
     (ql:register-local-projects)
-    (ql:quickload package)
-    (stein.util:cd prev-dir)))
+    (prog1
+	(ql:quickload package)
+      (stein.util:cd prev-dir))))
 
 (defun reload (package)
   (ql:register-local-projects)
