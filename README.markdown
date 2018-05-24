@@ -3,7 +3,7 @@
 
 ## Requirements
 
-- Unix like os (Linux, Mac OS X).
+- Linux, Mac OS X, Windows.
 - git
 - [Quicklisp](https://www.quicklisp.org/)
 - Sbcl or ClozureCL
